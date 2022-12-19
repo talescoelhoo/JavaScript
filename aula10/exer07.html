@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soma</title>
+    <style>
+        body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #a07171;
+    color: white;
+
+}
+
+main {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.n3{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, button{
+    padding: 10px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+h1{
+    font-family:Georgia, , Times, serif;
+}
+    </style>
+</head>
+<body>
+    <main>
+
+        <h1>Somando Valores</h1>
+        <input type="number" name="tex1" id="tex1"> +
+        <input type="number" name="tex2" id="tex2">
+        <input type="button" value="Somar"  onclick="somar ()"> 
+        <div id="n3">resultado</div>
+    </main>
+
+    <script>
+        function somar() {
+            var cx1 = window.document.getElementById('tex1') 
+            var cx2 = window.document.querySelector('input#tex2')
+            var r = window.document.getElementById('n3')
+            var n1 = Number(cx1.value)
+            var n2 = Number(cx2.value)
+            var m = n1 + n2
+            r.innerHTML=`A soma dos valores de ${n1} e ${n2} é igual a ${m}`
+
+        }
+    </script>
+</body>
+</html>
